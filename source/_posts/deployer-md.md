@@ -24,7 +24,7 @@ chmod +x /usr/local/bin/dep
 
 ```
 sudo adduser deployer
-``` 
+```
 
 将 depoloyer 用户加到 sudoers 中
 
@@ -45,7 +45,7 @@ cat ~/.ssh/.id_rsa.pub
 ```
 
 
-## 项目部署
+## 3.项目部署
 
 
 SSH 免密部署
