@@ -20,12 +20,14 @@ chmod +x /usr/local/bin/dep
 ## 2. 服务器配置
 
 添加用户
+
 ```
 sudo adduser deployer
 
 ``` 
 
 将 depoloyer 用户加到 sudoers 中
+
 ```
 $ vim /etc/sudoers
 # 在最后加入
@@ -35,11 +37,13 @@ deployer ALL=(ALL) NOPASSWD: ALL
 ```
 
 创建ssh密钥
+
 ```
 ssh-keygen -t rsa -b 4096 -C "deployer" 
 ```
 
 将生成的公钥拷贝出来,去代码仓库添加SSH 公钥（保证我们的deployer账号能从服务器clone代码）
+
 ```
 cat ~/.ssh/.id_rsa.pub
 ```
@@ -50,20 +54,23 @@ cat ~/.ssh/.id_rsa.pub
 
 SSH 免密部署
 将开发环境/部署机的公钥拷贝到服务器deployer用户
+
 ```
 ssh-copy-id -i ~/.ssh/id_rsa.pub deployer@47.93.34.21
-
 ```
 
 切换至项目目录
+
 ```
 cd /www/project
 ```
 
 然后执行以下命令
+
 ```
 dep init
 ```
+
 此时会提示让我们选中项目类型,如果你不确定你项目类型，选中common类型即可。该命令执行完后会在当前目录生成一个deploy.php，也就是我们的部署文件，这里我们只需要关心几个关键的配置：
 
 ```
@@ -77,6 +84,7 @@ host('47.93.34.21') //服务器ip
 
 
 配置完成后，执行如下命令
+
 ```
 dep deploy -vvv
 ```
@@ -88,6 +96,7 @@ releases: 发布版本的历史文件夹，可以配置最多保留多少个版�
 shared：共享文件夹，用于存储各个版本的共享文件
 
 注意此时我们的nginx应该对应修改网站根目录配置
+
 ```
 //根据实际情况修改即可
 root /home/project/current/public
