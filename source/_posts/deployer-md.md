@@ -29,11 +29,7 @@ sudo adduser deployer
 将 depoloyer 用户加到 sudoers 中
 
 ```
-$ vim /etc/sudoers
-# 在最后加入
 deployer ALL=(ALL) NOPASSWD: ALL
-# 保存并退出
-
 ```
 
 创建ssh密钥
