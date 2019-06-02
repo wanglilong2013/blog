@@ -15,7 +15,7 @@ vim /home/king/sh/beanstalkd_monitor.sh
 
 #!/bin/bash
 ps aux | grep "/usr/bin/beanstalkd" | grep -v "grep"  | awk '{ print NF=$2}'
-if [ ! $? -ne 0 ]; then /usr/bin/beanstalkd; fi
+if [ $? -eq 0 ]; then /usr/bin/beanstalkd; fi
 
 ```
 
