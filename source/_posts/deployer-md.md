@@ -11,6 +11,7 @@ Deployer是用于部署任何PHP应用程序的CLI工具,用php语言编写，�
 ## 1. deployer安装
 
 在开发环境/部署机 安装deployer
+
 ```
 curl -LO https://deployer.org/deployer.phar
 mv deployer.phar /usr/local/bin/dep
@@ -23,7 +24,6 @@ chmod +x /usr/local/bin/dep
 
 ```
 sudo adduser deployer
-
 ``` 
 
 将 depoloyer 用户加到 sudoers 中
@@ -94,7 +94,7 @@ shared：共享文件夹，用于存储各个版本的共享文件
 注意此时我们的nginx应该对应修改网站根目录配置
 
 ```
-//根据实际情况修改即可
+根据实际情况修改即可
 root /home/project/current/public
 
 ```
