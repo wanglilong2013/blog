@@ -10,8 +10,8 @@ tags: [php, pdf]
 
 
 开发语言： php 
-
-工具包： knplabs/knp-snappy
+php框架： Yii
+composer包： knplabs/knp-snappy
 
 
 ## 代码实现
