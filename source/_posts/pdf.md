@@ -17,36 +17,12 @@ composer包： knplabs/knp-snappy
 ## 代码实现
 
 ```
-    /**
-     * Download itinerary pdf （行程下载）
-     *
-     * @return document
-     */
-    public function actionItinerary()
+    public function html2pdf($html)
     {
         $snappy = new  \Knp\Snappy\Pdf('/usr/local/bin/wkhtmltopdf');
-        $productId = Yii::app()->request->getParam('product_id', null);
-
-        if (empty($productId)) {
-            return $this->responseError(null, '行程id不能为空');
-        }
-        $productInfo = $this->factoryService->getProductInfo(['product_id' => $productId]);
-        if ($productInfo == false) {
-            return $this->responseError(null, '获取产品信息失败');
-        }
-        $itineraryData = isset($productInfo['itinerary']) ? $productInfo['itinerary'] : [];
-        if (empty($itineraryData)) {
-            return $this->responseError(null, '获取产品行程失败');
-        }
-        $params = [
-            'itinerary_data' => $itineraryData,
-            'return' => true,
-        ];
-
-        $itineraryHtml = $this->widget('application.widgets.CustomizeItineraryWidget', $params)->content;
         header('Content-Type: application/pdf');
         header('Content-Disposition: attachment; filename="itinerary.pdf"');
-        echo $snappy->getOutputFromHtml($itineraryHtml);
+        echo $snappy->getOutputFromHtml($html);
     }
 
 ```
