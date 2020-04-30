@@ -1,7 +1,7 @@
 ---
 title: beanstalkd 协议篇
 date: 2019-05-09 17:53:47
-tags:
+tags: [beanstalk]
 ---
 
 ﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿# Beanstalkd 协议

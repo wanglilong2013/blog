@@ -1,7 +1,7 @@
 ---
 title: Git用户如何通过SSH登录Gogs服务器
 date: 2020-04-30 22:04:47
-tags:
+tags: [ssh, git, gogs]
 ---
 
 ﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿Git用户SSH登录GOGS服务器
