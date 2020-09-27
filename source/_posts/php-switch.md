@@ -3,8 +3,8 @@ title: siwtch 的非常规写法
 date: 2020-09-27 15:44:10
 tags: [PHP]
 ---
+
 PHP中Switch的非常规写法
--------
 
 ## Switch 语法
 
