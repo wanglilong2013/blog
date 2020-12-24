@@ -11,7 +11,7 @@ tags: [Redis, 数据结构]
 
 Redis 的跳跃表由 redis.h/zskiplistNode 和 redis.h/zskiplist 两个结构定义， 其中 zskiplistNode 结构用于表示跳跃表节点， 而 zskiplist 结构则用于保存跳跃表节点的相关信息， 比如节点的数量， 以及指向表头节点和表尾节点的指针， 等等。
 
-![一个跳跃表][/imgs/skiplist1.png]
+![一个跳跃表](/imgs/skiplist1.png)
 
 上图展示了一个跳跃表实例，位于图片最左边的是skiplist结构，包含以下属性：
 
