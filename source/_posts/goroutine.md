@@ -1,7 +1,7 @@
 ---
 title: Golang并发控制
 date: 2019-06-08 21:30:10
-tags: [消息队列]
+tags: [Go]
 ---
 
 记录一下Golang并发控制的常用3种方法
