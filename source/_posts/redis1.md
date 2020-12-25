@@ -1,5 +1,5 @@
 ---
-title: Redis常用数据结构及使用场景
+title: Redis五种常用数据结构及使用场景
 date: 2020-2-5 22:30:10
 tags: [Redis]
 ---
